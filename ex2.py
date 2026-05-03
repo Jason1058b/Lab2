@@ -8,6 +8,7 @@ def main():
     print("Average Temperature=", avg)
     print("Minimum Temperature=", min)
     print("Maximum Temperature=", max)
+    print("Median Temperature=", median)
 
 def display_main_menu():
        print("Enter some numbers separated by commas (e.g. 5, 67, 32)")
@@ -18,7 +19,14 @@ def get_user_input():
     num_list = [int(x) for x in num_list]
     return num_list
     
-
+def calc_median_temperature(temp):
+    temp.sort()
+    n = len(temp)
+    if n % 2 == 0:
+        median = (temp[n//2 - 1] + temp[n//2]) / 2
+    else:
+        median = temp[n//2]
+    return median
 
 def calc_average_temperature(temp):
     total = sum(temp)
