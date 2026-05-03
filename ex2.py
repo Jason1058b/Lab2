@@ -4,6 +4,7 @@ def main():
     num_list = get_user_input()
     avg = calc_average_temperature(num_list)
     min, max = calc_min_max_temperature(num_list)
+    median = calc_median_temperature(num_list)
     print("Average Temperature=", avg)
     print("Minimum Temperature=", min)
     print("Maximum Temperature=", max)
