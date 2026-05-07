@@ -39,3 +39,4 @@ def calc_min_max_temperature(temp):
     return [min_temp, max_temp]
 
 main()
+
